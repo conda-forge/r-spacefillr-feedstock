@@ -1,4 +1,4 @@
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -11,7 +11,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/spacefillr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/spacefillr/spacefillr_{{ version }}.tar.gz
-  sha256: 57d70975b2821eca79f4bcce80eeb32e17fb21cfebc1f041fc0b3f8c31eb34ba
+  sha256: bba5f08ef33a0d4689595e298fc4f0f3e8fe58bf1c094ee0fc4d2cb462e24a65
 
 build:
   merge_build_host: true  # [win]
