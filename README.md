@@ -3,6 +3,7 @@ About r-spacefillr-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-spacefillr-feedstock/blob/main/LICENSE.txt)
 
+
 About r-spacefillr
 ------------------
 
@@ -11,6 +12,7 @@ Home: https://github.com/tylermorganwall/spacefillr
 Package license: MIT
 
 Summary: Generates random and quasi-random space-filling sequences. Supports the following sequences: 'Halton', 'Sobol', 'Owen'-scrambled 'Sobol',  'Owen'-scrambled 'Sobol' with errors distributed as blue noise, progressive jittered, progressive multi-jittered ('PMJ'), 'PMJ' with blue noise, 'PMJ02', and 'PMJ02' with blue noise. Includes a 'C++' 'API'. Methods derived from "Constructing Sobol sequences with better two-dimensional projections" (2012) <doi:10.1137/070709359> S. Joe and F. Y. Kuo, "Progressive Multi-Jittered Sample Sequences" (2018) <https://graphics.pixar.com/library/ProgressiveMultiJitteredSampling/paper.pdf> Christensen, P., Kensler, A. and Kilpatrick, C., and "A Low-Discrepancy Sampler that Distributes Monte Carlo Errors as a Blue Noise in Screen Space" (2019) E. Heitz, B. Laurent, O. Victor, C. David and I. Jean-Claude, <doi:10.1145/3306307.3328191>.
+
 About r-spacefillr
 ------------------
 
@@ -153,7 +155,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
