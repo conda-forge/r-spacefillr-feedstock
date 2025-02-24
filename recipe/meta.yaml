@@ -1,4 +1,4 @@
-{% set version = "0.3.3" %}
+{% set version = "0.4.0" %}
 
 {% set posix = 'm2-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/spacefillr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/spacefillr/spacefillr_{{ version }}.tar.gz
-  sha256: 6cdaeaa7f617d5a94e90f0d6c32e16be8e86702d41e1ea7d08891452fdb9f021
+  sha256: 5d8ba53dd5ef32d11c42b5ea4e956f0ab5799e6000cf38e36307225a5fe268b6
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
