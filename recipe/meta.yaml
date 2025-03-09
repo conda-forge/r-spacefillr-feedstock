@@ -1,5 +1,4 @@
 {% set version = "0.4.0" %}
-
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -13,7 +12,7 @@ source:
   sha256: 5d8ba53dd5ef32d11c42b5ea4e956f0ab5799e6000cf38e36307225a5fe268b6
 
 build:
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -31,11 +30,11 @@ requirements:
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
-
+    - cross-r-base                 # [build_platform != target_platform]
+    - r-rcpp                       # [build_platform != target_platform]
   host:
     - r-base
     - r-rcpp >=1.0.0
-
   run:
     - r-base
     - r-rcpp >=1.0.0
@@ -47,13 +46,10 @@ test:
 
 about:
   home: https://github.com/tylermorganwall/spacefillr
-
   license: MIT
   summary: "Generates random and quasi-random space-filling sequences. Supports the following sequences: 'Halton', 'Sobol', 'Owen'-scrambled 'Sobol',  'Owen'-scrambled 'Sobol' with errors distributed as blue noise, progressive jittered, progressive multi-jittered ('PMJ'), 'PMJ' with blue noise, 'PMJ02', and 'PMJ02' with
     blue noise. Includes a 'C++' 'API'. Methods derived from \"Constructing Sobol sequences with better two-dimensional projections\" (2012) <doi:10.1137/070709359> S. Joe and F. Y. Kuo, \"Progressive Multi-Jittered Sample Sequences\" (2018) <https://graphics.pixar.com/library/ProgressiveMultiJitteredSampling/paper.pdf>
     Christensen, P., Kensler, A. and Kilpatrick, C., and \"A Low-Discrepancy Sampler that Distributes Monte Carlo Errors as a Blue Noise in Screen Space\" (2019) E. Heitz, B. Laurent, O. Victor, C. David and I. Jean-Claude, <doi:10.1145/3306307.3328191>."
-
-  license_family: MIT
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
