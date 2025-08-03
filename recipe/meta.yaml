@@ -12,10 +12,14 @@ source:
   sha256: 5d8ba53dd5ef32d11c42b5ea4e956f0ab5799e6000cf38e36307225a5fe268b6
 
 build:
-  number: 1
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -56,5 +60,5 @@ about:
 
 extra:
   recipe-maintainers:
-    - ocefpaf
     - conda-forge/r
+    - ocefpaf
